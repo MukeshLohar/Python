@@ -11,7 +11,7 @@ li = sorted(list(li),reverse=True)
 print(li)
 
 
-#method2
+# method2
 def removeDuplicate( li ):
     newli=[]
     seen = set()
