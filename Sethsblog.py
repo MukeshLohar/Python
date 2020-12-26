@@ -1,3 +1,5 @@
+#each time you run this code, it will create a notepad with sets
+#
 import requests
 from bs4 import BeautifulSoup
 from IPython.display import Markdown, display
@@ -36,7 +38,7 @@ for article in soup.find_all('div', class_='post'):
         articles_in_seth[headline] = '\n'.join(paragraphs)
 
 
-with open("news.txt" , 'w') as file :
+with open("news.txt" , 'w') as file : #provide the file directory path here : format  as follows open(filepathalongwithextension , 'w')
     for key,value in articles_in_seth.items() :
         file.write("-"*len(key))
         file.write('\n')
