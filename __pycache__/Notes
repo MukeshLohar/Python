@@ -1,0 +1,27 @@
+Django 
+
+Start-project to create an App
+
+run server --to run server
+
+start-app -- to start an app
+
+
+under app --> create an urls py nad relate in projects URL.py
+
+            first looks into project urls,then app urls
+            Create an viwe for page
+            then add import views in URL in app module
+            add the URL in url.pu under app module
+            traling slash 
+            
+App --> tempalates __> app --> html and css files
+
+creating base templates to inheritance 
+
+creating admin users -- first create a DB
+    python .\manage.py makemigrations --> checking for anys existing DB
+    python .\manage.py migrate --> creates a Db
+
+
+python .\manage.py sqlmigrate Blog 0001 --> gives us sql query

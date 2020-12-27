@@ -1,5 +1,5 @@
 {
-    "python.formatting.provider": "black",
+    "python.formatting.provider": "yapf",
     "python.linting.enabled": true,
     "workbench.settings.useSplitJSON": true,
     "python.pythonPath": "C:\\Users\\M870265\\Anaconda3\\python.exe"
