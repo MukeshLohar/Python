@@ -1,52 +1,41 @@
-#Step 5
+#Write your code below this line 👇
+def paint_calc(height,width,cover):
+    area = height * width
+    total_cans = round((area /cover))
+    print(total_cans)
 
-import random
 
-#TODO-1: - Update the word list to use the 'word_list' from hangman_words.py
-#Delete this line: word_list = ["ardvark", "baboon", "camel"]
-chosen_word = random.choice(word_list)
-word_length = len(chosen_word)
 
-end_of_game = False
-lives = 6
 
-#TODO-3: - Import the logo from hangman_art.py and print it at the start of the game.
 
-#Testing code
-print(f'Pssst, the solution is {chosen_word}.')
 
-#Create blanks
-display = []
-for _ in range(word_length):
-    display += "_"
+#Write your code above this line 👆
+# Define a function called paint_calc() so that the code below works.   
 
-while not end_of_game:
-    guess = input("Guess a letter: ").lower()
+# 🚨 Don't change the code below 👇
+test_h = 2 #int(input("Height of wall: "))
+test_w = 3 #int(input("Width of wall: "))
+coverage = 5
+paint_calc(height=test_h, width=test_w, cover=coverage)
 
-    #TODO-4: - If the user has entered a letter they've already guessed, print the letter and let them know.
 
-    #Check guessed letter
-    for position in range(word_length):
-        letter = chosen_word[position]
-        print(f"Current position: {position}\n Current letter: {letter}\n Guessed letter: {guess}")
-        if letter == guess:
-            display[position] = letter
+#Write your code below this line 👇
 
-    #Check if user is wrong.
-    if guess not in chosen_word:
-        #TODO-5: - If the letter is not in the chosen_word, print out the letter and let them know it's not in the word.
-        lives -= 1
-        if lives == 0:
-            end_of_game = True
-            print("You lose.")
+def prime_checker(number):
+    for i in range(2,number):
+        if number%i ==0 :
+            is_prime=False
+    if is_prime :
+        print('Prime Number')
+    else :
+        print('Not a Prime Number')
 
-    #Join all the elements in the list and turn it into a String.
-    print(f"{' '.join(display)}")
 
-    #Check if user has got all letters.
-    if "_" not in display:
-        end_of_game = True
-        print("You win.")
+#Write your code above this line 👆
+    
+#Do NOT change any of the code below👇
+n = int(input("Check this number: "))
+prime_checker(number=n)
 
-    #TODO-2: - Import the stages from hangman_art.py and make this error go away.
-    print(stages[lives])
+
+
