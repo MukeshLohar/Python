@@ -47,6 +47,8 @@ logo = """
 #Hint 4: Create a deal_card() function that uses the List below to *return* a random card.
 #11 is the Ace.
 import random
+import os
+
 
 def deal_card():
   """Returns a random card from the deck."""
@@ -134,5 +136,5 @@ def play_game():
 
 #Hint 14: Ask the user if they want to restart the game. If they answer yes, clear the console and start a new game of blackjack and show the logo from art.py.
 while input("Do you want to play a game of Blackjack? Type 'y' or 'n': ") == "y":
-  
+  os.system('cls')
   play_game()
