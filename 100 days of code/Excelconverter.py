@@ -3,7 +3,7 @@ import csv,os
 clients = []
 client_server = {}
 servers_client = []
-def extarct_client(inputfilename):
+def extract_client(inputfilename):
     """ This function will extract client and return back text file/s for individual patch group for a client"""
     global client_server
     desktop = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop') 
@@ -37,7 +37,7 @@ def extarct_client(inputfilename):
     print("\n\n")
     for key, values in client_server.items():
         
-        clientfilename = (os.path.join(desktop,"SCM_Patching_Grouping",(f"{str(key)}.txt")))
+        clientfilename = (os.path.join(desktop,"SCM_Patching_Grouping",(f"{str(key)} ({len(values)}).txt")))
         
         with open(clientfilename, 'w+') as newfile:
             for n in values:
@@ -46,6 +46,6 @@ def extarct_client(inputfilename):
         print(f"{key} has these {len(values)} \n")
 
 
-extarct_client("new 3.txt") #provide your inputfile in quotes
+extract_client("C:\\Temp\\temp.csv") #provide your inputfile in quotes
 
 
