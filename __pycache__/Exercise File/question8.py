@@ -6,9 +6,9 @@
 
 #method1
 
-values= input('enter the values :')
+values = input('enter the values :')
 
-input_list = [str(x)  for x in values.split(",")]
+input_list = [str(x) for x in values.split(",")]
 
 input_list.sort()
 print(','.join(input_list))
